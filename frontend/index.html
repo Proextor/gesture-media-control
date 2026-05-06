@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles.css">
+    <title>Gesture Media Control</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="top-bar">
+            <h1>Gesture Media Control</h1>
+            <div id="backend-status" class="status-badge">Connecting...</div>
+        </header>
+
+        <div class="main-content">
+            <div class="camera-section">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="overlay-canvas"></canvas>
+                <div id="gesture-overlay">
+                    <div id="gesture-status">Ready</div>
+                </div>
+            </div>
+
+            <aside class="info-panel">
+                <h2>How to Use</h2>
+                <ul>
+                    <li>Pinch to control volume</li>
+                    <li>Swipe right → Next track</li>
+                    <li>Swipe left → Previous track</li>
+                    <li>Open palm → Pause/Play</li>
+                    <li>Press C to calibrate</li>
+                </ul>
+
+                <h2>Status</h2>
+                <p id="gesture-mode">Mode: Volume</p>
+                <p id="connection-info">Waiting for backend...</p>
+            </aside>
+        </div>
+        <div id="volume-bar-container">
+            <div id="volume-bar-fill"></div>
+        </div>
+    </div>
+    <script type="module" src="/src/app.js"></script>
+</body>
+
+</html>

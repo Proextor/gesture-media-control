@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mediaController.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "loudness": "^0.4.2",
+    "node-key-sender": "^1.0.11",
+    "selfsigned": "^5.5.0",
+    "ws": "^8.19.0"
+  }
+}

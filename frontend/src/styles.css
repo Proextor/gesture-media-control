@@ -1,0 +1,109 @@
+#gesture-overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 12px 18px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(12px);
+    color: #00ffc8;
+    font-size: 18px;
+    border-radius: 14px;
+    font-family: system-ui;
+    box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, #111, #000);
+    color: #e0e0e0;
+    font-family: system-ui;
+}
+
+video,
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+video {
+    transform: scaleX(-1);
+}
+
+canvas {
+    pointer-events: none;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 255, 200, 0.2);
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.status-connected {
+    background: rgba(0, 255, 120, 0.2);
+    color: #00ff88;
+}
+
+.status-disconnected {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff4444;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.camera-section {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-panel {
+    flex: 1;
+    padding: 24px;
+    background: rgba(20, 20, 20, 0.8);
+    border-left: 1px solid rgba(0, 255, 200, 0.15);
+}
+
+#gesture-mode {
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#volume-bar-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#volume-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00ffc8, #0088ff);
+    transition: width 0.15s ease-out;
+}

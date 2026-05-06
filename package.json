@@ -1,0 +1,8 @@
+{
+    "name": "gesture-media-control",
+    "version": "1.0.0",
+    "type": "module",
+    "dependencies": {
+        "selfsigned": "^5.5.0"
+    }
+}
